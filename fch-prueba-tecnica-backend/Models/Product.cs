@@ -15,8 +15,8 @@ namespace fch_prueba_tecnica_backend.Models
 
         public string prodModel { get; set; }
 
-        public decimal price { get; set; }
+        public decimal prodUnitPrice { get; set; }
 
-        public int stock { get; set; }
+        public int prodStock { get; set; }
     }
 }

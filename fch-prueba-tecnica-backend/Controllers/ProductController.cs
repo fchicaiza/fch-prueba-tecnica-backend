@@ -29,7 +29,7 @@ namespace fch_prueba_tecnica_backend.Controllers
             return Created("Product Created successfully", true);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct([FromBody] Product product, string id)
         {
             if (product == null) return BadRequest();
@@ -39,7 +39,7 @@ namespace fch_prueba_tecnica_backend.Controllers
 
             return Created("Product Updated successfully", true);
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(string id)
         {
             await db.DeleteProduct(id);

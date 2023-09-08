@@ -6,7 +6,9 @@ namespace fch_prueba_tecnica_backend.Models
     public class Product
     {
         [BsonId]
-        public ObjectId Id { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        //public ObjectId Id { get; set; }
+        public string Id { get; set; }
         public string prodCode { get; set; }
 
         public string prodName { get; set; }
